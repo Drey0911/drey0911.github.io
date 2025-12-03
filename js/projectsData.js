@@ -129,7 +129,39 @@ const projectsData = {
         mockupLink: "img/projects/project5/mockup.png",
         deployLink: "",
         images: ["project5/project5-1.png", "project5/project5-2.png","project5/project5-3.png","project5/project5-4.png","project5/project5-5.png","project5/project5-6.png","project5/project5-7.png"]
-    }
+    },
+
+    6: {
+        title: "LibreCO E-commerce para la venta de E-Books",
+        type: "fullstack",
+        description: "Plataforma web SPA (Single Page Application) para la venta y distribucion de libros digitales (E-Books), catalogo y features por tipos de libros, carrito de compras y UI/UX atractiva y moderna, ademas de contar con los servicios de autenticación de Supabase y su Storage para PDF, EPUB y PNG, todo, desarrollado con el stack MERN y API Rest para Backend.",
+        features: [
+            "Autenticación y registro de usuarios con Supabase",
+            "Guardado de EPUB, PDF e imagenes en Supabase Storage",
+            "SPA con UI/UX moderna, atractiva y responsive",
+            "Catalogo de libros con filtros por categorias de manera dinamica",
+            "Carrito de compras funcional",
+            "Validacion de tarjetas de credito con algoritmo Luhn",
+            "Aplicacion de descuentos para la parte de destacados"
+        ],
+        technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
+        techTags: [
+            { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+            { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { class: "tech-mongodb", name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { class: "tech-supabase", name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+            { class: "tech-tailwind", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            { class: "tech-nodejs", name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { class: "tech-express", name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" }
+        ],
+        repoLink: "https://github.com/Drey0911/Ebooks-LibreCO-BACKEND",
+        repoLink2: "https://github.com/Drey0911/Ebooks-LibreCO-FRONTEND",
+        mockupLink: "img/projects/project6/mockup.png",
+        deployLink: "",
+        images: ["project6/project6-1.png", "project6/project6-2.png","project6/project6-3.png","project6/project6-4.png","project6/project6-5.png","project6/project6-6.png","project6/project6-7.png"]
+    },
+
 };
 
 // Exportar para usar en otros archivos

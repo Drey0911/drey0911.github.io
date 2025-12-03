@@ -322,7 +322,7 @@
 
 .tech-react { 
     background: rgba(97, 218, 251, 0.15); 
-    color: #61dafb; 
+    color: #50b4d0; 
     border-color: rgba(97, 218, 251, 0.4);
     box-shadow: 0 2px 8px rgba(97, 218, 251, 0.2);
 }
@@ -332,6 +332,41 @@
     color: #f05033; 
     border-color: rgba(240, 80, 51, 0.4);
     box-shadow: 0 2px 8px rgba(240, 80, 51, 0.2);
+}
+
+.tech-vite { 
+    background: rgba(255, 215, 64, 0.15); 
+    color: #ffd740; 
+    border-color: rgba(255, 215, 64, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 215, 64, 0.2);
+}
+
+.tech-mongodb { 
+    background: rgba(65, 163, 64, 0.15); 
+    color: #41a340; 
+    border-color: rgba(65, 163, 64, 0.4);
+    box-shadow: 0 2px 8px rgba(65, 163, 64, 0.2);
+}
+
+.tech-supabase { 
+    background: rgba(51, 51, 51, 0.15); 
+    color: #8a8a8a; 
+    border-color: rgba(51, 51, 51, 0.4);
+    box-shadow: 0 2px 8px rgba(51, 51, 51, 0.2);
+}
+
+.tech-nodejs { 
+    background: rgba(112, 168, 85, 0.15); 
+    color: #70a855; 
+    border-color: rgba(112, 168, 85, 0.4);
+    box-shadow: 0 2px 8px rgba(112, 168, 85, 0.2);
+}
+
+.tech-express { 
+    background: rgba(0, 0, 0, 0.15); 
+    color: #8a8a8a; 
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ====================================================================================================================================================
@@ -633,7 +668,7 @@
 }
 
 .modal-section {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(87, 85, 85, 0.121);
     border-radius: 15px;
     padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -641,7 +676,7 @@
 }
 
 .modal-section:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(87, 85, 85, 0.121);
     border-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }

@@ -134,9 +134,9 @@ const projectsData = {
     6: {
         title: "LibreCO E-commerce para la venta de E-Books",
         type: "fullstack",
-        description: "Plataforma web SPA (Single Page Application) para la venta y distribucion de libros digitales (E-Books), catalogo y features por tipos de libros, carrito de compras y UI/UX atractiva y moderna, ademas de contar con los servicios de autenticación de Supabase y su Storage para PDF, EPUB y PNG, todo, desarrollado con el stack MERN y API Rest para Backend.",
+        description: "Plataforma web SPA para la venta y distribucion de libros digitales (E-Books), catalogo dinamico alimentado por la BD, organizando por categorias, carrito de compras, UI/UX atractiva y moderna, ademas de contar con los servicios de autenticación de Supabase y su Storage para PDF, EPUB y PNG, todo, desarrollado con el stack MERN y API Rest.",
         features: [
-            "Autenticación y registro de usuarios con Supabase",
+            "Autenticación y registro de usuarios con Supabase Auth y JWT",
             "Guardado de EPUB, PDF e imagenes en Supabase Storage",
             "SPA con UI/UX moderna, atractiva y responsive",
             "Catalogo de libros con filtros por categorias de manera dinamica",
@@ -144,7 +144,7 @@ const projectsData = {
             "Validacion de tarjetas de credito con algoritmo Luhn",
             "Aplicacion de descuentos para la parte de destacados"
         ],
-        technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
+        technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación con JWT tambien y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
         techTags: [
             { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
             { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },

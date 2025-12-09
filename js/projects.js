@@ -154,8 +154,8 @@ function renderProjects(filterType) {
         
         const imageUrl = `img/projects/project${id}/project${id}.png`;
         
-        // Crear tags solo con logos
-        const techLogosHTML = project.techTags.map(tech => {
+        const sourceLogos = project.previewTechs && project.previewTechs.length ? project.previewTechs : project.techTags.slice(0, 3);
+        const techLogosHTML = sourceLogos.map(tech => {
             return `<img src="${tech.logo}" alt="${tech.name}" class="tech-logo-card" title="${tech.name}">`;
         }).join('');
         

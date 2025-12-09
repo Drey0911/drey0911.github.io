@@ -21,6 +21,14 @@ const projectsData = {
             { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
             { class: "tech-postgresql", name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
         ],
+        previewTechs: [
+            { class: "tech-html", name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { class: "tech-css", name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { class: "tech-spring", name: "SpringBoot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+            { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+            { class: "tech-postgresql", name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
+        ],
         repoLink: "https://github.com/Drey0911/APP-SpringMotors-Concesionario",
         repoLink2: "",
         mockupLink: "img/projects/project1/mockup.png",
@@ -42,6 +50,13 @@ const projectsData = {
             "ChatBOT Basico para disponibilidad, medicamentos y ayuda al usuario (Prototipo)"
         ],
         technologies: "Para este proyecto se utilizó Python con Flask para el desarrollo backend (Rutas, modelos y servicios), acompañado de librerias utiles para Websockets, Schedulers y jobs, Autenticación JWT, plantillas JINJA2 para el dashboard administrativo con un frontend en react native para el desarrollo movil siguiendo la arquitectura MVP (Modelo-vista-presentador), ademas de una base de datos relacional en MySQL, consumo y desarrollo de API REST y conexion con WhatsApp Business API para el envio de notificaciones y recordatorios automáticos.",
+        techTags: [
+            { class: "tech-python", name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { class: "tech-flask", name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+            { class: "tech-reactnative", name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { class: "tech-typescript", name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+            { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
+        ],
         techTags: [
             { class: "tech-python", name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
             { class: "tech-flask", name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
@@ -74,7 +89,14 @@ const projectsData = {
             { class: "tech-spring", name: "SpringBoot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
             { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
             { class: "tech-bootstrap", name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" }
-       
+        ],
+        previewTechs: [
+            { class: "tech-html", name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { class: "tech-css", name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { class: "tech-spring", name: "SpringBoot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+            { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+            { class: "tech-bootstrap", name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" }
         ],
         repoLink: "https://github.com/Drey0911/APP-Football-Pro",
         repoLink2: "",
@@ -97,6 +119,10 @@ const projectsData = {
         ],
         technologies: "Para este proyecto se utilizó el framework Flutter para desarrollo movil junto a sus diversas configuraciones unicas tanto para iOS como Android, cuenta con una conexion a Firebase haciendo uso del Storage para el almacenamiento de imagenes y el authentication para el registro y autenticacion de usuarios, ademas de una base de datos en tiempo real para el almacenamiento de datos.",
         techTags: [
+            { class: "tech-flutter", name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+            { class: "tech-firebase", name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
+        ],
+        previewTechs: [
             { class: "tech-flutter", name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
             { class: "tech-firebase", name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
         ],
@@ -126,6 +152,12 @@ const projectsData = {
             { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
             { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
         ],
+        previewTechs: [
+            { class: "tech-php", name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+            { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+            { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+        ],
         repoLink: "https://github.com/Drey0911/Inventario-Y-Gestion-De-Productos",
         repoLink2: "",
         mockupLink: "img/projects/project5/mockup.png",
@@ -148,6 +180,16 @@ const projectsData = {
         ],
         technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación con JWT tambien y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
         techTags: [
+            { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+            { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { class: "tech-mongodb", name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { class: "tech-supabase", name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+            { class: "tech-nodejs", name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { class: "tech-express", name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+            { class: "tech-tailwind", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+        ],
+        previewTechs: [
             { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-mongodb", name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },

@@ -327,6 +327,13 @@
     box-shadow: 0 2px 8px rgba(97, 218, 251, 0.2);
 }
 
+tech-laravel { 
+    background: rgba(255, 45, 45, 0.15); 
+    color: #ff2d2d; 
+    border-color: rgba(255, 45, 45, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 45, 45, 0.2);
+}
+
 .tech-bootstrap { 
     background: rgba(86, 61, 124, 0.15); 
     color: #7852b2; 

@@ -134,31 +134,34 @@ const projectsData = {
     },
 
     5: {
-        title: "INVDrey - Software para la gestión de inventarios",
+        title: "Dashboard basico para la gestión de inventarios",
         type: "backend",
-        description: "Software basico para el control de productos, clientes, compras, ventas y proveedores dentro de un inventario digital, permitiendo la gestión y correcto almacenamiento de datos de cada modulo del inventario.",
+        description: "Software basico para el control de categorias, productos, clientes, compras, ventas y proveedores dentro de un inventario digital, permitiendo la gestión y correcto almacenamiento de datos de cada modulo del inventario, como tambien teniendo una visualizacion grafica por medio de graficas dinámicas.",
         features: [
-            "Control y gestión de productos, clientes, proveedores, usuarios y roles",
+            "Control y gestión de categorias, productos, clientes, proveedores y usuarios",
             "Control y gestión de compras y ventas relacionadas con productos, clientes y proveedores",
-            "Manejo de roles y permisos",
-            "Control de sesiones y autenticación de usuarios",
-            "Interfaz amigable",
-            "Sistema de Datatables para todo el inventario",
+            "Graficos dinámicas para la visualización de datos",
+            "Autenticación y registro de usuarios con filament",
+            "Sistema de reportes en PDF y Excel",
+            "Dashboard administrativo con estadísticas",
         ],
-        technologies: "Para este proyecto se utilizó PHP para el desarrollo del backend, para el Frontend se utilizó HTML, CSS de la mano de su framewrok TailwindCSS, JavaScript para mejorar la experiencia del usuario, ademas de una base de datos MySQL para el almacenamiento de datos.",
+        technologies: "Para este proyecto se utilizó PHP con el framework Laravel para el desarrollo backend, utilizando Blade para las vistas, TailwindCSS + Vite para los estilos, ademas de JavaScript para mejorar la experiencia del usuario con los graficos, cuenta con una base de datos relacional en MySQL para el almacenamiento de datos, haciendo uso de librerias como Livewire para componentes dinamicos, Filament para la gestion de usuarios y autenticación, y Chart.js para la parte de graficos dinamicos.",
         techTags: [
             { class: "tech-php", name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+            { class: "tech-laravel", name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-            { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+            { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" }            
         ],
         previewTechs: [
             { class: "tech-php", name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+            { class: "tech-laravel", name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
             { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
         ],
-        repoLink: "https://github.com/Drey0911/Inventario-Y-Gestion-De-Productos",
+        repoLink: "https://github.com/Drey0911/Dashboard-De-Inventario-Con-Filament",
         repoLink2: "",
         mockupLink: "img/projects/project5/mockup.png",
         deployLink: "",

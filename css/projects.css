@@ -200,11 +200,60 @@
     box-shadow: 0 2px 8px rgba(227, 79, 38, 0.2);
 }
 
+.tech-chartjs { 
+    background: rgba(235, 95, 137, 0.15); 
+    color: #ec89af; 
+    border-color: rgba(227, 38, 136, 0.4); 
+    box-shadow: 0 2px 8px rgba(227, 38, 158, 0.2);
+}
+
 .tech-css { 
     background: rgba(21, 114, 182, 0.15); 
     color: #1572b6; 
     border-color: rgba(21, 114, 182, 0.4);
     box-shadow: 0 2px 8px rgba(21, 114, 182, 0.2);
+}
+
+.tech-template { 
+    background: rgba(180, 213, 254, 0.15); 
+    color: #75abed; 
+    border-color: rgba(88, 121, 162, 0.4);
+    box-shadow: 0 2px 8px rgba(103, 154, 217, 0.2);
+}
+
+.tech-dart { 
+    background: rgba(0, 132, 255, 0.15); 
+    color: #0084ff; 
+    border-color: rgba(0, 132, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 132, 255, 0.2);
+}
+
+.tech-apirest { 
+    background: rgba(255, 99, 71, 0.15); 
+    color: #ff6347; 
+    border-color: rgba(255, 99, 71, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 99, 71, 0.2);
+}
+
+.tech-json { 
+    background: rgba(255, 215, 0, 0.15); 
+    color: #ffd700; 
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+}
+
+.tech-dbbase { 
+    background: rgba(0, 117, 143, 0.15); 
+    color: #00758f; 
+    border-color: rgba(0, 117, 143, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 117, 143, 0.2);
+}
+
+.tech-thymeleaf { 
+    background: rgba(54, 124, 90, 0.15); 
+    color: #367c5a; 
+    border-color: rgba(54, 124, 90, 0.4);
+    box-shadow: 0 2px 8px rgba(54, 124, 90, 0.2);
 }
 
 .tech-js { 

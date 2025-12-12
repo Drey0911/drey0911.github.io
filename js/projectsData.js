@@ -19,7 +19,10 @@ const projectsData = {
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-spring", name: "SpringBoot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
             { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-            { class: "tech-postgresql", name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
+            { class: "tech-postgresql", name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+            { class: "tech-thymeleaf", name: "Thymeleaf", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/thymeleaf/thymeleaf-original.svg" },
+            { class: "tech-dbbase", name: "NeonDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datatables/datatables-original.svg" },
+            { class: "tech-dbbase", name: "H2 Database", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datatables/datatables-original.svg" }
         ],
         previewTechs: [
             { class: "tech-html", name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -47,21 +50,24 @@ const projectsData = {
             "Dashboard administrativo web",
             "Gestion de medicamentos, sedes, usuarios, recolecciones, historiales y favoritos",
             "Interfaz amigable y responsiva",
-            "ChatBOT Basico para disponibilidad, medicamentos y ayuda al usuario (Prototipo)"
+            "ChatBOT Basico para disponibilidad, medicamentos y ayuda al usuario (Prototipo)",
+            "Arquitectura Modelo-Vista-Presentador"
         ],
-        technologies: "Para este proyecto se utilizó Python con Flask para el desarrollo backend (Rutas, modelos y servicios), acompañado de librerias utiles para Websockets, Schedulers y jobs, Autenticación JWT, plantillas JINJA2 para el dashboard administrativo con un frontend en react native para el desarrollo movil siguiendo la arquitectura MVP (Modelo-vista-presentador), ademas de una base de datos relacional en MySQL, consumo y desarrollo de API REST y conexion con WhatsApp Business API para el envio de notificaciones y recordatorios automáticos.",
+        technologies: "Para este proyecto se utilizó Python con Flask para el desarrollo backend (Rutas, modelos y servicios), acompañado de librerias utiles para Websockets, Schedulers y jobs, Autenticación JWT, plantillas JINJA2 para el dashboard administrativo con un frontend en react native para el desarrollo movil, ademas de una base de datos relacional en MySQL, consumo y desarrollo de API REST y conexion con WhatsApp Business API para el envio de notificaciones y recordatorios automáticos.",
         techTags: [
             { class: "tech-python", name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
             { class: "tech-flask", name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
             { class: "tech-reactnative", name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
             { class: "tech-typescript", name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-            { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
+            { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+            { class: "tech-template", name: "Jinja2", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/htmx/htmx-original.svg" },
+            { class: "tech-apirest", name: "API Rest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { class: "tech-json", name: "JWT Auth", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" }
         ],
-        techTags: [
+        previewTechs: [
             { class: "tech-python", name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
             { class: "tech-flask", name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
             { class: "tech-reactnative", name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-            { class: "tech-typescript", name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
             { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
         ],
         repoLink: "https://github.com/Drey0911/TG-MediFast-Dispensario-BACKEND",
@@ -88,7 +94,9 @@ const projectsData = {
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-spring", name: "SpringBoot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
             { class: "tech-java", name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-            { class: "tech-bootstrap", name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" }
+            { class: "tech-bootstrap", name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+            { class: "tech-thymeleaf", name: "Thymeleaf", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/thymeleaf/thymeleaf-original.svg" },
+            { class: "tech-dbbase", name: "H2 Database", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datatables/datatables-original.svg" }
         ],
         previewTechs: [
             { class: "tech-html", name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -120,7 +128,8 @@ const projectsData = {
         technologies: "Para este proyecto se utilizó el framework Flutter para desarrollo movil junto a sus diversas configuraciones unicas tanto para iOS como Android, cuenta con una conexion a Firebase haciendo uso del Storage para el almacenamiento de imagenes y el authentication para el registro y autenticacion de usuarios, ademas de una base de datos en tiempo real para el almacenamiento de datos.",
         techTags: [
             { class: "tech-flutter", name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
-            { class: "tech-firebase", name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
+            { class: "tech-firebase", name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+            { class: "tech-dart", name: "Dart", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" }
         ],
         previewTechs: [
             { class: "tech-flutter", name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
@@ -144,6 +153,7 @@ const projectsData = {
             "Autenticación y registro de usuarios con filament",
             "Sistema de reportes en PDF y Excel",
             "Dashboard administrativo con estadísticas",
+            "Arquitectura Modelo Vista Controlador"
         ],
         technologies: "Para este proyecto se utilizó PHP con el framework Laravel para el desarrollo backend, utilizando Blade para las vistas, TailwindCSS + Vite para los estilos, ademas de JavaScript para mejorar la experiencia del usuario con los graficos, cuenta con una base de datos relacional en MySQL para el almacenamiento de datos, haciendo uso de librerias como Livewire para componentes dinamicos, Filament para la gestion de usuarios y autenticación, y Chart.js para la parte de graficos dinamicos.",
         techTags: [
@@ -151,8 +161,12 @@ const projectsData = {
             { class: "tech-laravel", name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
             { class: "tech-js", name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { class: "tech-mysql", name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-            { class: "tech-css", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-            { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" }            
+            { class: "tech-tailwind", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+            { class: "tech-laravel", name: "Livewire", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+            { class: "tech-laravel", name: "Filament", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+            { class: "tech-chartjs", name: "Chart.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chartjs/chartjs-plain.svg" },
+            { class: "tech-template", name: "Blade", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/htmx/htmx-original.svg" },
         ],
         previewTechs: [
             { class: "tech-php", name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
@@ -181,7 +195,7 @@ const projectsData = {
             "Validacion de tarjetas de credito con algoritmo Luhn",
             "Aplicacion de descuentos para la parte de destacados"
         ],
-        technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación con JWT tambien y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
+        technologies: "Proyecto desarrollado con el stack MERN (MongoDB, Express, React, Node.js) utilizando Vite como bundler para React en el frontend, TailwindCSS para la parte visual y de estilos, ademas de Supabase para la autenticación con JWT y almacenamiento de archivos, creando una API REST personalizada con Express y Node.js para el manejo de datos y logica del negocio para guardar toda la informacion en el Storage de Supabase y en MongoDB NoSQL.",
         techTags: [
             { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
             { class: "tech-vite", name: "Vite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
@@ -190,7 +204,9 @@ const projectsData = {
             { class: "tech-supabase", name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
             { class: "tech-nodejs", name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
             { class: "tech-express", name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-            { class: "tech-tailwind", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+            { class: "tech-tailwind", name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            { class: "tech-apirest", name: "API Rest", logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+             { class: "tech-json", name: "JWT Auth", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" }
         ],
         previewTechs: [
             { class: "tech-react", name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },

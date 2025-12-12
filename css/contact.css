@@ -61,43 +61,69 @@
 
 .whatsapp-options p {
     color: var(--text-light);
-    margin-bottom: 20px; /* Reducido de 25px para eliminar espacio extra */
+    margin-bottom: 50px; 
 }
 
 .whatsapp-buttons {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 0; /* Cambiado de auto para eliminar espacio extra */
+    margin-top: 0;
 }
 
 .whatsapp-btn {
-    display: flex;
+
     align-items: center;
     gap: 12px;
     padding: 15px 20px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
+    border-radius: 8px;
     border: none;
-    border-radius: 10px;
-    font-weight: 600;
+    color: #fff;
     cursor: pointer;
+    background: linear-gradient(135deg, #25D366, #128C7E);
     transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
     text-align: left;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(125, 42, 232, 0.3);
+    max-width: 320px;
+    display: flex;
+    align-items: center;
     width: 100%;
-    max-width: 320px; 
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    box-sizing: border-box; 
+
 }
 
 .whatsapp-btn:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    background: linear-gradient(135deg, #128C7E, #25D366);
+    transform: translateY(-3px);
 }
 
 .whatsapp-btn:active {
     transform: translateY(1px);
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.whatsapp-btn:hover::before {
+    left: 100%;
 }
 
 .whatsapp-btn i {
@@ -118,7 +144,7 @@
 .contact-info, .whatsapp-options {
     display: flex;
     flex-direction: column;
-    height: auto; /* Cambiado de 100% */
+    height: auto; 
 }
 
 .filter-buttons {

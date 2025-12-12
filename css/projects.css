@@ -43,7 +43,6 @@
     border-radius: 50%;
     background: var(--primary-color);
     transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
     z-index: -1;
 }
 
@@ -819,19 +818,60 @@ tech-laravel {
     align-items: center;
 }
 
+
 .btn-repository {
-    display: inline-flex;
+
     align-items: center;
-    gap: 10px;
-    padding: 14px 24px;
-    border-radius: 10px;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    transition: all 0.3s ease;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    flex: 0 0 auto;
-    justify-content: center;
-    width: 180px;
+    font-size: 1em;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(104, 104, 104, 0.3);
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.btn-repository:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-repository:active {
+    transform: translateY(1px);
+}
+
+.btn-repository::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.btn-repository:hover::before {
+    left: 100%;
 }
 
 /* Botón para repositorio general */
@@ -872,12 +912,12 @@ tech-laravel {
 
 /* Botón mockup */
 .btn-mockup {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #3b66f4, #9340f9);
     color: white;
 }
 
 .btn-mockup:hover {
-    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    background: linear-gradient(135deg, #9340f9, #3b66f4);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(110, 142, 251, 0.4);
 }
@@ -898,18 +938,9 @@ tech-laravel {
     Scroll Modal
    ==================================================================================================================================================== */
 
-.modal-content::-webkit-scrollbar {
-    width: 6px;
+.modal-content {
+    scrollbar-width: none;
 }
-
-.modal-content::-webkit-scrollbar-thumb {
-    background: rgba(59, 130, 246, 0.5);
-    border-radius: 3px;
-}
-
-.modal-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(59, 130, 246, 0.8);
-} 
 
 /* ====================================================================================================================================================
     Animaciones

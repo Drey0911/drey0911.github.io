@@ -33,6 +33,7 @@ body {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 .container {
@@ -290,28 +291,6 @@ section {
     left: 100%;
 }
 
-/* Estilos para el botón de mockup (Modal proyectos) */
-
-.btn-mockup {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-}
-
-.btn-mockup i {
-    margin-right: 8px;
-}
-
-.btn-mockup:hover {
-    background: linear-gradient(135deg,#a777e3 , #6e8efb);
-}
-
-/* Botones del project Modal (conjunto) */
-
-.modal-project-buttons {
-    display: flex;
-    gap: 25px;
-    margin-top: auto;
-}
-
 /* ====================================================================================================================================================
      Barra de navegacion
    ==================================================================================================================================================== */
@@ -444,7 +423,12 @@ section {
 .logo-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    background-image: linear-gradient(to right, 
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    background-clip: text;
+    color: transparent; 
 }
 
 .logo-subtitle {

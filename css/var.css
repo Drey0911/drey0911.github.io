@@ -36,8 +36,8 @@ html[data-theme="light"] {
   --card-bg: #eef1f6;
   --border-color: #cbd5e1;
   --project-color: #cdd5e2;
-  --primary-header-color: #11ff00 0%;
-  --secondary-header-color: #16213e 80%;
+  --primary-header-color: #fefefe 0%;
+  --secondary-header-color: #e2e8f0;
   --social-bg:  rgba(255, 255, 255, 0.1);
   --social-icon: #323e51;
   --tech-html: rgba(251, 97, 55, 0.1);

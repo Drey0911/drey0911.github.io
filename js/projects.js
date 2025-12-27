@@ -117,8 +117,6 @@ function initProjects() {
         });
     });
     
-    setupModalListeners();
-    
     // Agregar event listener para scroll en móviles
     if (isMobile()) {
         window.addEventListener('scroll', handleMobileScroll);
@@ -127,7 +125,7 @@ function initProjects() {
     }
 }
 
-// Función para obtener el nombre del tipo en español
+// Función para obtener el nombre del tipo
 function getTypeName(type) {
     const typeNames = {
         'frontend': 'Frontend',
@@ -199,209 +197,22 @@ function setupCardListeners() {
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
-        // En móviles, usar click para abrir modal directamente
-        if (isMobile()) {
-            card.addEventListener('click', (e) => {
-                const btn = card.querySelector('.btn-view-more');
-                if (btn) {
-                    openProjectModal(btn.getAttribute('data-project'));
-                }
-            });
-        } else {
-            // En desktop, mantener el hover
-            card.addEventListener('click', (e) => {
-                // Solo abrir modal si se hace click en el botón específicamente
-                if (e.target.closest('.btn-view-more')) {
-                    const btn = e.target.closest('.btn-view-more');
-                    openProjectModal(btn.getAttribute('data-project'));
-                }
-            });
-        }
-    });
-}
-
-// Función para abrir el modal del proyecto
-function openProjectModal(projectId) {
-    const project = projectsData[projectId];
-    const projectModal = document.querySelector('.project-modal');
-    const modalImages = document.querySelectorAll('.modal-images img');
-    
-    // Actualizar título y badge
-    document.querySelector('.modal-title').textContent = project.title;
-    const typeBadge = document.querySelector('.modal-type-badge');
-    typeBadge.textContent = getTypeName(project.type);
-    
-    // Actualizar descripción
-    document.querySelector('.description-text').textContent = project.description;
-    
-    // Actualizar características
-    const featuresList = document.querySelector('.features-list');
-    featuresList.innerHTML = '';
-    project.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.textContent = feature;
-        featuresList.appendChild(li);
-    });
-    
-    // Actualizar tecnologías
-    document.querySelector('.technologies-text').textContent = project.technologies;
-    
-    // Actualizar tags de tecnología en el modal
-    const techTagsModal = document.querySelector('.tech-tags-modal');
-    techTagsModal.innerHTML = '';
-    project.techTags.forEach(tech => {
-        const span = document.createElement('span');
-        span.className = tech.class;
-        span.innerHTML = `
-            <img src="${tech.logo}" alt="${tech.name}" class="tech-logo-modal">
-            ${tech.name}
-        `;
-        techTagsModal.appendChild(span);
-    });
-    
-    // Crear botones dinámicamente según el tipo de proyecto
-    const buttonsContainer = document.querySelector('.modal-project-buttons');
-    buttonsContainer.innerHTML = '';
-    
-    if (project.type === 'fullstack') {
-        if (project.repoLink) {
-            const btnBackend = document.createElement('a');
-            btnBackend.href = project.repoLink;
-            btnBackend.target = '_blank';
-            btnBackend.className = 'btn-repository btn-repo-backend';
-            btnBackend.innerHTML = '<i class="fab fa-github"></i><span>Backend</span>';
-            buttonsContainer.appendChild(btnBackend);
-        }
+        const btn = card.querySelector('.btn-view-more');
+        const projectId = btn.getAttribute('data-project');
         
-        if (project.repoLink2 && project.repoLink2.trim() !== '') {
-            const btnFrontend = document.createElement('a');
-            btnFrontend.href = project.repoLink2;
-            btnFrontend.target = '_blank';
-            btnFrontend.className = 'btn-repository btn-repo-frontend';
-            btnFrontend.innerHTML = '<i class="fab fa-github"></i><span>Frontend</span>';
-            buttonsContainer.appendChild(btnFrontend);
-        }
-    } else {
-        if (project.repoLink) {
-            const btnRepo = document.createElement('a');
-            btnRepo.href = project.repoLink;
-            btnRepo.target = '_blank';
-            btnRepo.className = 'btn-repository btn-repo-general';
-            btnRepo.innerHTML = '<i class="fab fa-github"></i><span>Repositorio</span>';
-            buttonsContainer.appendChild(btnRepo);
-        }
-    }
-    
-    if (project.mockupLink && project.mockupLink.trim() !== '') {
-        const btnMockup = document.createElement('a');
-        btnMockup.href = project.mockupLink;
-        btnMockup.target = '_blank';
-        btnMockup.className = 'btn-repository btn-mockup';
-        btnMockup.innerHTML = '<i class="fas fa-image"></i><span>Ver Mockup</span>';
-        buttonsContainer.appendChild(btnMockup);
-    }
-    
-    if (project.deployLink && project.deployLink.trim() !== '') {
-        const btnDeploy = document.createElement('a');
-        btnDeploy.href = project.deployLink;
-        btnDeploy.target = '_blank';
-        btnDeploy.className = 'btn-repository btn-deploy';
-        btnDeploy.innerHTML = '<i class="fas fa-rocket"></i><span>Ver Despliegue</span>';
-        buttonsContainer.appendChild(btnDeploy);
-    }
-
-    // Contar imágenes disponibles
-    totalImages = project.images.filter(img => img).length;
-    
-    // Actualizar imágenes
-    modalImages.forEach((img, index) => {
-        if (project.images[index]) {
-            img.src = `img/projects/${project.images[index]}`;
-            img.alt = `${project.title} - Captura ${index + 1}`;
-            img.style.display = 'block';
-        } else {
-            img.style.display = 'none';
-        }
-    });
-    
-    // Crear indicadores
-    createIndicators(totalImages);
-    
-    // Resetear el carrusel
-    currentImageIndex = 0;
-    modalImages.forEach(img => img.classList.remove('active'));
-    if (modalImages[0]) modalImages[0].classList.add('active');
-    
-    // Iniciar carrusel solo si hay más de una imagen
-    if (totalImages > 1) {
-        startCarousel(modalImages);
-    } else {
-        stopCarousel();
-    }
-    
-    // Mostrar modal
-    projectModal.style.display = 'flex';
-    setTimeout(() => {
-        projectModal.classList.add('active');
-    }, 10);
-    document.body.style.overflow = 'hidden';
-}
-
-// Función para configurar event listeners del modal
-function setupModalListeners() {
-    const projectModal = document.querySelector('.project-modal');
-    const modalClose = document.querySelector('.modal-close');
-    const modalBackdrop = document.querySelector('.modal-backdrop');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    
-    // Cerrar modal
-    const closeModal = () => {
-        projectModal.classList.remove('active');
-        setTimeout(() => {
-            projectModal.style.display = 'none';
-        }, 400);
-        document.body.style.overflow = 'auto';
-        stopCarousel();
-    };
-    
-    modalClose.addEventListener('click', closeModal);
-    modalBackdrop.addEventListener('click', closeModal);
-    
-    // Controles del carrusel
-    prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const modalImages = document.querySelectorAll('.modal-images img');
-        prevImage(modalImages);
-        stopCarousel();
-        startCarousel(modalImages);
-    });
-    
-    nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const modalImages = document.querySelectorAll('.modal-images img');
-        nextImage(modalImages);
-        stopCarousel();
-        startCarousel(modalImages);
-    });
-    
-    // Teclado: flechas y escape
-    document.addEventListener('keydown', (e) => {
-        if (!projectModal.classList.contains('active')) return;
+        // En móviles y desktop, al hacer click redirigir a la página de detalles
+        card.addEventListener('click', (e) => {
+            // Prevenir la navegación si se hace click en un enlace específico
+            if (!e.target.closest('a')) {
+                window.location.href = `project-detail.html?id=${projectId}`;
+            }
+        });
         
-        const modalImages = document.querySelectorAll('.modal-images img');
-        
-        if (e.key === 'ArrowLeft') {
-            prevImage(modalImages);
-            stopCarousel();
-            startCarousel(modalImages);
-        } else if (e.key === 'ArrowRight') {
-            nextImage(modalImages);
-            stopCarousel();
-            startCarousel(modalImages);
-        } else if (e.key === 'Escape') {
-            closeModal();
-        }
+        // El botón también redirige explícitamente
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.location.href = `project-detail.html?id=${projectId}`;
+        });
     });
 }
 

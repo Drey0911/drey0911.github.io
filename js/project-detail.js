@@ -128,7 +128,7 @@ function loadGallery() {
     
     // Imagen principal
     if (projectImages.length > 0) {
-        mainImage.src = `img/projects/${projectImages[0]}`;
+        mainImage.src = `../img/projects/${projectImages[0]}`;
     }
     
     // Crear indicadores
@@ -149,7 +149,7 @@ function loadGallery() {
         if (index === 0) thumbnail.classList.add('active');
         
         const img = document.createElement('img');
-        img.src = `img/projects/${image}`;
+        img.src = `../img/projects/${image}`;
         img.alt = `Miniatura ${index + 1}`;
         
         thumbnail.appendChild(img);
@@ -195,7 +195,7 @@ function updateGallery() {
     // Actualizar imagen principal
     mainImage.style.opacity = '0';
     setTimeout(() => {
-        mainImage.src = `img/projects/${projectImages[currentImageIndex]}`;
+        mainImage.src = `../img/projects/${projectImages[currentImageIndex]}`;
         mainImage.style.opacity = '1';
     }, 200);
     

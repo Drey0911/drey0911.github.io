@@ -204,14 +204,14 @@ function setupCardListeners() {
         card.addEventListener('click', (e) => {
             // Prevenir la navegación si se hace click en un enlace específico
             if (!e.target.closest('a')) {
-                window.location.href = `project-detail.html?id=${projectId}`;
+                window.location.href = `./project-detail/?id=${projectId}`;
             }
         });
         
         // El botón también redirige explícitamente
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `project-detail.html?id=${projectId}`;
+            window.location.href = `./project-detail/?id=${projectId}`;
         });
     });
 }

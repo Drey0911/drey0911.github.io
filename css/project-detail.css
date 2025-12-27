@@ -83,7 +83,7 @@ body {
 
 .project-hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, var(--primary-header-color), var(--secondary-header-color));
+    background: linear-gradient(135deg, var(--bg-color), var(--bg-secondary));
     position: relative;
     overflow: hidden;
 }

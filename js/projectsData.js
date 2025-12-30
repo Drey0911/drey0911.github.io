@@ -34,7 +34,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/APP-SpringMotors-Concesionario",
         repoLink2: "",
-        mockupLink: "img/projects/project1/mockup.png",
+        mockupLink: "../img/projects/project1/mockup.png",
         deployLink: "",
         images: ["project1/project1-1.png", "project1/project1-2.jpg","project1/project1-3.jpg","project1/project1-4.png","project1/project1-5.png","project1/project1-6.png","project1/project1-7.png"]
     },
@@ -72,7 +72,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/TG-MediFast-Dispensario-BACKEND",
         repoLink2: "https://github.com/Drey0911/TG-MediFast-Dispensario-FRONTEND",
-        mockupLink: "img/projects/project2/mockup.png",
+        mockupLink: "../img/projects/project2/mockup.png",
         deployLink: "",
         images: ["project2/project2-1.png", "project2/project2-2.png","project2/project2-3.png","project2/project2-4.png","project2/project2-5.png","project2/project2-6.png","project2/project2-7.png"]
     },
@@ -108,7 +108,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/APP-Football-Pro",
         repoLink2: "",
-        mockupLink: "img/projects/project3/mockup.png",
+        mockupLink: "../img/projects/project3/mockup.png",
         deployLink: "",
         images: ["project3/project3-1.png", "project3/project3-2.png","project3/project3-3.png","project3/project3-4.png","project3/project3-5.png","project3/project3-6.png","project3/project3-7.png"]
     },
@@ -137,7 +137,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/APP-Smart-Pets-Veterinaria",
         repoLink2: "",
-        mockupLink: "img/projects/project4/mockup.jpg",
+        mockupLink: "../img/projects/project4/mockup.jpg",
         deployLink: "",
         images: ["project4/project4-1.png", "project4/project4-2.png","project4/project4-3.png","project4/project4-4.png","project4/project4-5.png","project4/project4-6.png","project4/project4-7.png"]
     },
@@ -177,7 +177,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/Dashboard-De-Inventario-Con-Filament",
         repoLink2: "",
-        mockupLink: "img/projects/project5/mockup.png",
+        mockupLink: "../img/projects/project5/mockup.png",
         deployLink: "",
         images: ["project5/project5-1.png", "project5/project5-2.png","project5/project5-3.png","project5/project5-4.png","project5/project5-5.png","project5/project5-6.png","project5/project5-7.png"]
     },
@@ -218,7 +218,7 @@ const projectsData = {
         ],
         repoLink: "https://github.com/Drey0911/Ebooks-LibreCO-BACKEND",
         repoLink2: "https://github.com/Drey0911/Ebooks-LibreCO-FRONTEND",
-        mockupLink: "img/projects/project6/mockup.png",
+        mockupLink: "../img/projects/project6/mockup.png",
         deployLink: "",
         images: ["project6/project6-1.png", "project6/project6-2.png","project6/project6-3.png","project6/project6-4.png","project6/project6-5.png","project6/project6-6.png","project6/project6-7.png"]
     },

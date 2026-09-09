@@ -1,0 +1,107 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: var(--t-fast);
+}
+
+.chip img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.chip--brand {
+  border-color: var(--brand-line);
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.chip--interactive {
+  cursor: pointer;
+}
+
+.chip--interactive:hover,
+.chip--interactive.is-active {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+  transform: translateY(-2px);
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* FILTROS */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--t-fast);
+}
+
+.filter-btn i {
+  font-size: 0.8rem;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  background: var(--brand-soft);
+}
+
+.filter-btn.is-active {
+  color: var(--brand-contrast);
+  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+  box-shadow: var(--shadow-brand);
+}
+
+.filter-btn__count {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.filter-btn:not(.is-active) .filter-btn__count {
+  background: var(--surface-3);
+}
+
+@media (max-width: 620px) {
+  .filters {
+    width: 100%;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,23 @@
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/utilities.css");
+
+@import url("layout/section.css");
+@import url("layout/navbar.css");
+@import url("layout/footer.css");
+
+@import url("components/buttons.css");
+@import url("components/badge.css");
+@import url("components/cards.css");
+@import url("components/chips.css");
+@import url("components/timeline.css");
+@import url("components/marquee.css");
+@import url("components/modal.css");
+
+@import url("sections/hero.css");
+@import url("sections/about.css");
+@import url("sections/skills.css");
+@import url("sections/projects.css");
+@import url("sections/contact.css");
+
+@import url("pages/project.css");

@@ -1,0 +1,125 @@
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+  padding-left: 1.9rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--brand), var(--brand-line), transparent);
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1.9rem;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--brand);
+  box-shadow: 0 0 0 4px var(--brand-soft);
+}
+
+.timeline__item--current::before {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.timeline__top {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  background: var(--brand-soft);
+  border: 1px solid var(--brand-line);
+}
+
+.timeline__tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.timeline__title {
+  font-size: 1.02rem;
+}
+
+.timeline__org {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-soft);
+  font-size: var(--step--1);
+  margin-top: 0.15rem;
+}
+
+.timeline__org i {
+  color: var(--brand);
+  font-size: 0.75rem;
+}
+
+.timeline__desc {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.timeline__points {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.timeline__points li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.timeline__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 var(--brand-soft);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(92, 124, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 124, 255, 0);
+  }
+}

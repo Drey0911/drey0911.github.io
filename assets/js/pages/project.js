@@ -7,6 +7,7 @@ import { projects, findProject } from "../data/projects.data.js";
 import { getTechList } from "../data/tech.data.js";
 import { createGallery, createLightbox } from "../modules/gallery.js";
 import { renderSocials } from "../modules/socials.js";
+import { termBar, windowChrome } from "../core/chrome.js";
 
 const currentId = new URLSearchParams(window.location.search).get("id");
 const project = findProject(currentId);
@@ -18,6 +19,18 @@ const renderHero = () => {
   qs("[data-project-title]").textContent = tx(project.title);
   qs("[data-project-desc]").textContent = tx(project.description);
   qs("[data-crumb-title]").textContent = tx(project.title);
+
+  const galleryWindow = qs("[data-gallery-window]");
+  if (galleryWindow) {
+    galleryWindow.querySelectorAll(".win__tabs, .win__nav").forEach((node) => node.remove());
+    galleryWindow.prepend(
+      ...windowChrome({
+        favicon: "fas fa-images",
+        title: tx(project.title).split(" — ")[0],
+        path: `/project-detail/?id=${project.id}`
+      })
+    );
+  }
 
   const meta = qs("[data-project-meta]");
   clear(meta);
@@ -138,8 +151,9 @@ const renderSwitch = () => {
   const card = (target, labelKey, modifier, icon) =>
     el(
       "a",
-      { className: `switch-card ${modifier}`, attrs: { href: projectUrl(target.id) } },
+      { className: `switch-card term term--compact ${modifier}`, attrs: { href: projectUrl(target.id) } },
       [
+        termBar(`${t("term.projects")}/${target.id}`, modifier === "switch-card--prev" ? "prev" : "next"),
         el("span", { className: "switch-card__label" }, [
           el("i", { attrs: { class: icon, "aria-hidden": "true" } }),
           el("span", { text: ` ${t(labelKey)}` })

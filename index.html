@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -110,7 +110,7 @@
                                     <i class="fas fa-code" aria-hidden="true"></i>
                                     <span data-site="badge.org">Portafolio Profesional</span>
                                 </span>
-                                <span class="badge__serial" data-site="badge.serial">DEV-2026</span>
+                                <span class="badge__serial" data-site="badge.serial">DEV-0911</span>
                             </header>
 
                             <div class="badge__body">
@@ -151,16 +151,24 @@
             <div class="stats-row" data-stats data-reveal></div>
 
             <div class="about__grid" style="margin-top: var(--space-6);">
-                <article class="card card--hover" data-reveal>
-                    <span class="card__topline"></span>
+                <article class="card term" data-reveal>
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.profile">~/perfil</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <span class="card__icon"><i class="fas fa-id-badge" aria-hidden="true"></i></span>
                     <span class="panel__label" data-i18n="about.profileLabel">Datos personales</span>
                     <h3 class="card__title" data-i18n="about.profileTitle">Perfil</h3>
                     <ul class="data-list" data-profile-facts></ul>
                 </article>
 
-                <article class="card card--hover" data-reveal style="--reveal-delay: 90ms;">
-                    <span class="card__topline"></span>
+                <article class="card term" data-reveal style="--reveal-delay: 90ms;">
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.qualities">~/cualidades</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <span class="card__icon"><i class="fas fa-star" aria-hidden="true"></i></span>
                     <span class="panel__label" data-i18n="about.qualitiesLabel">Perfil profesional</span>
                     <h3 class="card__title" data-i18n="about.qualitiesTitle">Cualidades</h3>
@@ -169,7 +177,12 @@
             </div>
 
             <div class="about__panels" style="margin-top: var(--space-5);">
-                <article class="panel" data-reveal>
+                <article class="panel term term--wide" data-reveal>
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.education">~/formacion</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <header class="panel__head">
                         <span class="panel__icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
                         <div>
@@ -180,7 +193,12 @@
                     <div class="timeline" data-education></div>
                 </article>
 
-                <article class="panel" data-reveal style="--reveal-delay: 90ms;">
+                <article class="panel term term--wide" data-reveal style="--reveal-delay: 90ms;">
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.work">~/experiencia</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <header class="panel__head">
                         <span class="panel__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
                         <div>
@@ -239,7 +257,12 @@
             </div>
 
             <div class="contact__grid">
-                <article class="contact-panel contact-panel--accent" data-reveal>
+                <article class="contact-panel contact-panel--accent term term--wide term--accent" data-reveal>
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.contact">~/contacto</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <span class="contact-panel__ribbon"></span>
                     <h3 class="contact-panel__title" data-i18n="contact.infoTitle">Datos de contacto</h3>
                     <p class="contact-panel__text" data-i18n="contact.infoText"></p>
@@ -271,7 +294,12 @@
                     </div>
                 </article>
 
-                <article class="contact-panel" data-reveal style="--reveal-delay: 90ms;">
+                <article class="contact-panel term term--wide" data-reveal style="--reveal-delay: 90ms;">
+                    <div class="term__bar" aria-hidden="true">
+                        <span class="term__dots"><i></i><i></i><i></i></span>
+                        <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.message">~/whatsapp</span>$</span><span class="term__cursor"></span></span>
+                        <span class="term__meta">bash</span>
+                    </div>
                     <h3 class="contact-panel__title" data-i18n="contact.waTitle">Mensaje rápido</h3>
                     <p class="contact-panel__text" data-i18n="contact.waText"></p>
                     <div class="wa-options" data-wa-options></div>
@@ -330,7 +358,12 @@
 
     <!-- MODAL WHATSAPP -->
     <div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="modal__panel">
+        <div class="modal__panel term term--wide term--static">
+            <div class="term__bar" aria-hidden="true">
+                <span class="term__dots"><i></i><i></i><i></i></span>
+                <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.modal">~/mensaje</span>$</span><span class="term__cursor"></span></span>
+                <span class="term__meta">bash</span>
+            </div>
             <header class="modal__head">
                 <div>
                     <h3 class="modal__title" id="modal-title" data-i18n="contact.modalTitle">Mensaje personalizado</h3>

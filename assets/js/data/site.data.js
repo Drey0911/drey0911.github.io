@@ -58,7 +58,7 @@ export const site = {
       es: "Portafolio Profesional",
       en: "Professional Portfolio"
     },
-    serial: "DEV-2026-0911",
+    serial: "DEV-0911",
     footer: {
       es: "drey.is-a.dev",
       en: "drey.is-a.dev"

@@ -4,6 +4,7 @@ import { observeReveal } from "../core/reveal.js";
 import { projectImage, projectUrl } from "../core/paths.js";
 import { projects, projectTypes } from "../data/projects.data.js";
 import { getTechList } from "../data/tech.data.js";
+import { windowChrome } from "../core/chrome.js";
 
 let activeFilter = "all";
 
@@ -80,41 +81,50 @@ const projectCard = (project) => {
     );
   });
 
-  const card = el(
+  const typeIcon = projectTypes.find((type) => type.id === project.type)?.icon || "fas fa-folder";
+  const shortTitle = tx(project.title).split(" — ")[0];
+
+  const media = el("div", { className: "project-card__media" }, [
+    el("img", {
+      attrs: {
+        src: projectImage(project.folder, project.cover),
+        alt: tx(project.title),
+        loading: "lazy"
+      }
+    }),
+    el("span", { className: "project-card__type", text: t(`projects.${project.type}`) }),
+    el("span", { className: "project-card__year", text: project.year })
+  ]);
+
+  const body = el("div", { className: "project-card__body" }, [
+    el("h3", { className: "project-card__title", text: tx(project.title) }),
+    el("p", { className: "project-card__text", text: tx(project.summary) }),
+    stack,
+    el("div", { className: "project-card__foot" }, [
+      el("span", { className: "project-card__link" }, [
+        el("span", { text: t("projects.viewMore") }),
+        el("i", { attrs: { class: "fas fa-arrow-right", "aria-hidden": "true" } })
+      ]),
+      repoLinks(project)
+    ])
+  ]);
+
+  return el(
     "article",
     {
-      className: "project-card",
-      attrs: { "data-reveal": "", tabindex: "0", role: "link" },
+      className: "project-card win",
+      attrs: { "data-reveal": "", tabindex: "0", role: "link", "aria-label": tx(project.title) },
       dataset: { project: project.id }
     },
     [
-      el("div", { className: "project-card__media" }, [
-        el("img", {
-          attrs: {
-            src: projectImage(project.folder, project.cover),
-            alt: tx(project.title),
-            loading: "lazy"
-          }
-        }),
-        el("span", { className: "project-card__type", text: t(`projects.${project.type}`) }),
-        el("span", { className: "project-card__year", text: project.year })
-      ]),
-      el("div", { className: "project-card__body" }, [
-        el("h3", { className: "project-card__title", text: tx(project.title) }),
-        el("p", { className: "project-card__text", text: tx(project.summary) }),
-        stack,
-        el("div", { className: "project-card__foot" }, [
-          el("span", { className: "project-card__link" }, [
-            el("span", { text: t("projects.viewMore") }),
-            el("i", { attrs: { class: "fas fa-arrow-right", "aria-hidden": "true" } })
-          ]),
-          repoLinks(project)
-        ])
-      ])
+      ...windowChrome({
+        favicon: typeIcon,
+        title: shortTitle,
+        path: `/project-detail/?id=${project.id}`
+      }),
+      el("div", { className: "win__view" }, [media, body])
     ]
   );
-
-  return card;
 };
 
 const renderGrid = () => {

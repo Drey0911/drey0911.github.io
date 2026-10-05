@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -73,16 +73,18 @@
             </div>
 
             <div class="gallery" data-reveal>
-                <div class="gallery__stage">
-                    <!-- IMG -->
-                    <img class="gallery__image" data-gallery-image src="" alt="">
-                    <button class="gallery__nav gallery__nav--prev" type="button" data-gallery-prev aria-label="Anterior">
-                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <button class="gallery__nav gallery__nav--next" type="button" data-gallery-next aria-label="Siguiente">
-                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                    <span class="gallery__counter" data-gallery-counter></span>
+                <div class="gallery__window win win--static" data-gallery-window>
+                    <div class="gallery__stage">
+                        <!-- IMG -->
+                        <img class="gallery__image" data-gallery-image src="" alt="">
+                        <button class="gallery__nav gallery__nav--prev" type="button" data-gallery-prev aria-label="Anterior">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="gallery__nav gallery__nav--next" type="button" data-gallery-next aria-label="Siguiente">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <span class="gallery__counter" data-gallery-counter></span>
+                    </div>
                 </div>
 
                 <div class="gallery__thumbs" data-gallery-thumbs></div>
@@ -91,7 +93,12 @@
             <!-- DETALLE -->
             <div class="project-body">
                 <div>
-                    <article class="detail-card" data-reveal>
+                    <article class="detail-card term term--wide" data-reveal>
+                        <div class="term__bar" aria-hidden="true">
+                            <span class="term__dots"><i></i><i></i><i></i></span>
+                            <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.features">~/caracteristicas</span>$</span><span class="term__cursor"></span></span>
+                            <span class="term__meta">bash</span>
+                        </div>
                         <header class="detail-card__head">
                             <i class="fas fa-circle-check" aria-hidden="true"></i>
                             <h2 data-i18n="detail.featuresTitle">Características principales</h2>
@@ -99,7 +106,12 @@
                         <ul class="check-list" data-features></ul>
                     </article>
 
-                    <article class="detail-card" data-reveal>
+                    <article class="detail-card term term--wide" data-reveal>
+                        <div class="term__bar" aria-hidden="true">
+                            <span class="term__dots"><i></i><i></i><i></i></span>
+                            <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.stack">~/stack</span>$</span><span class="term__cursor"></span></span>
+                            <span class="term__meta">bash</span>
+                        </div>
                         <header class="detail-card__head">
                             <i class="fas fa-layer-group" aria-hidden="true"></i>
                             <h2 data-i18n="detail.stackTitle">Stack tecnológico</h2>
@@ -110,7 +122,12 @@
                 </div>
 
                 <aside class="project-aside">
-                    <article class="detail-card" data-reveal>
+                    <article class="detail-card term term--wide" data-reveal>
+                        <div class="term__bar" aria-hidden="true">
+                            <span class="term__dots"><i></i><i></i><i></i></span>
+                            <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.sheet">~/ficha</span>$</span><span class="term__cursor"></span></span>
+                            <span class="term__meta">bash</span>
+                        </div>
                         <header class="detail-card__head">
                             <i class="fas fa-clipboard-list" aria-hidden="true"></i>
                             <h2 data-i18n="detail.infoTitle">Ficha del proyecto</h2>
@@ -118,7 +135,12 @@
                         <ul class="data-list" data-project-sheet></ul>
                     </article>
 
-                    <article class="detail-card" data-reveal>
+                    <article class="detail-card term term--wide" data-reveal>
+                        <div class="term__bar" aria-hidden="true">
+                            <span class="term__dots"><i></i><i></i><i></i></span>
+                            <span class="term__path"><span><span class="term__user">andrey@dev</span>:<span class="term__loc" data-i18n="term.author">~/autor</span>$</span><span class="term__cursor"></span></span>
+                            <span class="term__meta">bash</span>
+                        </div>
                         <header class="detail-card__head">
                             <i class="fas fa-user" aria-hidden="true"></i>
                             <h2 data-site="person.displayName">Andrey Mantilla</h2>

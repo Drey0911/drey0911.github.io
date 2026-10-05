@@ -3,6 +3,21 @@ export const es = {
     homeTitle: "Andrey Mantilla | Desarrollador de Software",
     detailTitle: "Detalle del proyecto | Andrey Mantilla"
   },
+  term: {
+    profile: "~/perfil",
+    qualities: "~/cualidades",
+    education: "~/formacion",
+    work: "~/experiencia",
+    contact: "~/contacto",
+    message: "~/whatsapp",
+    modal: "~/mensaje",
+    features: "~/caracteristicas",
+    stack: "~/stack",
+    sheet: "~/ficha",
+    author: "~/autor",
+    projects: "~/proyectos",
+    stats: "~/resumen"
+  },
   nav: {
     home: "Inicio",
     about: "Información",

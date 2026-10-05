@@ -1,0 +1,270 @@
+/* VENTANA DE NAVEGADOR (habilidades y proyectos) */
+.win {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-win);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), border-color var(--t-base);
+}
+
+.win:hover,
+.win:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--brand-line);
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--brand-line);
+}
+
+.win--static:hover {
+  transform: none;
+}
+
+.win:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+/* PESTAÑAS */
+.win__tabs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  height: 40px;
+  padding-left: 18px;
+  background: var(--chrome);
+}
+
+.win__tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  max-width: 64%;
+  height: 31px;
+  padding: 0 0.55rem 0 0.75rem;
+  border-radius: 8px 8px 0 0;
+  background: var(--chrome-2);
+  color: var(--text-soft);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+}
+
+.win__tab::before,
+.win__tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+}
+
+.win__tab::before {
+  left: -8px;
+  background: radial-gradient(circle at 0 0, transparent 7.5px, var(--chrome-2) 8px);
+}
+
+.win__tab::after {
+  right: -8px;
+  background: radial-gradient(circle at 100% 0, transparent 7.5px, var(--chrome-2) 8px);
+}
+
+.win__favicon {
+  flex-shrink: 0;
+  color: var(--brand);
+  font-size: 0.7rem;
+}
+
+.win__title {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.win__close-tab {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 0.2rem;
+  border-radius: 50%;
+  color: var(--text-muted);
+  font-size: 0.55rem;
+  transition: background-color var(--t-fast), color var(--t-fast);
+}
+
+.win__close-tab:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+/* CONTROLES DE VENTANA */
+.win__ctrl {
+  display: flex;
+  align-self: stretch;
+}
+
+.win__ctrl span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  transition: background-color 0.12s ease-out, color 0.12s ease-out;
+}
+
+.win__ctrl span:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.win__ctrl .win__x:hover {
+  background: var(--dot-red);
+  color: #fff;
+}
+
+/* BARRA DE NAVEGACION */
+.win__nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.45rem 0.6rem;
+  background: var(--chrome-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.win__btn {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--text-soft);
+  font-size: 0.66rem;
+  transition: background-color var(--t-fast), color var(--t-fast);
+}
+
+.win__btn:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.win__btn--off {
+  opacity: 0.4;
+}
+
+.win__btn--off:hover {
+  background: transparent;
+}
+
+.win__btn--reload i {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.win:hover .win__btn--reload i {
+  transform: rotate(360deg);
+}
+
+.win__url {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 28px;
+  margin-left: 0.25rem;
+  padding: 0 2rem 0 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: var(--chrome-field);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  transition: border-color var(--t-base), background-color var(--t-base);
+}
+
+.win__url > i {
+  flex-shrink: 0;
+  font-size: 0.58rem;
+  color: var(--text-muted);
+}
+
+.win__url-text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.win__host {
+  color: var(--text);
+}
+
+.win__star {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  transition: color var(--t-base), opacity var(--t-base), transform var(--t-base);
+}
+
+.win:hover .win__url {
+  border-color: var(--brand-line);
+}
+
+.win:hover .win__star {
+  color: var(--brand);
+  opacity: 1;
+  transform: translateY(-50%) rotate(72deg);
+}
+
+/* BARRA DE CARGA */
+.win__progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--royal-300));
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: transform 0.9s var(--ease-out), opacity 0.4s var(--ease);
+}
+
+.win:hover .win__progress {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* CONTENIDO */
+.win__view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 420px) {
+  .win__ctrl span {
+    width: 28px;
+  }
+  .win__btn--off {
+    display: none;
+  }
+}

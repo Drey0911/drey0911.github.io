@@ -3,6 +3,21 @@ export const en = {
     homeTitle: "Andrey Mantilla | Software Developer",
     detailTitle: "Project detail | Andrey Mantilla"
   },
+  term: {
+    profile: "~/profile",
+    qualities: "~/qualities",
+    education: "~/education",
+    work: "~/experience",
+    contact: "~/contact",
+    message: "~/whatsapp",
+    modal: "~/message",
+    features: "~/features",
+    stack: "~/stack",
+    sheet: "~/info",
+    author: "~/author",
+    projects: "~/projects",
+    stats: "~/summary"
+  },
   nav: {
     home: "Home",
     about: "About",

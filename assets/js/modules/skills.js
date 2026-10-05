@@ -3,6 +3,7 @@ import { t, tx, onLangChange } from "../core/i18n.js";
 import { observeReveal } from "../core/reveal.js";
 import { skillGroups, marqueeKeys } from "../data/skills.data.js";
 import { getTech } from "../data/tech.data.js";
+import { windowChrome } from "../core/chrome.js";
 
 let tip = null;
 
@@ -87,22 +88,29 @@ const renderGroups = () => {
 
     const card = el(
       "article",
-      { className: "skill-card", attrs: { "data-reveal": "" } },
+      { className: "skill-card win", attrs: { "data-reveal": "" } },
       [
-        el("div", { className: "skill-card__head" }, [
-          el("div", {}, [
-            el("span", { className: "skill-card__kicker", text: tx(group.kicker) }),
-            el("h3", { className: "skill-card__title", text: group.title }),
-            el("p", { className: "skill-card__subtitle", text: tx(group.subtitle) })
+        ...windowChrome({
+          favicon: group.icon,
+          title: group.title,
+          path: `/stack/${group.id}`
+        }),
+        el("div", { className: "win__view skill-card__view" }, [
+          el("div", { className: "skill-card__head" }, [
+            el("div", {}, [
+              el("span", { className: "skill-card__kicker", text: tx(group.kicker) }),
+              el("h3", { className: "skill-card__title", text: group.title }),
+              el("p", { className: "skill-card__subtitle", text: tx(group.subtitle) })
+            ]),
+            el("span", { className: "skill-card__icon" }, [
+              el("i", { attrs: { class: group.icon, "aria-hidden": "true" } })
+            ])
           ]),
-          el("span", { className: "skill-card__icon" }, [
-            el("i", { attrs: { class: group.icon, "aria-hidden": "true" } })
+          tags,
+          el("div", { className: "skill-card__hint" }, [
+            el("i", { attrs: { class: "fas fa-circle-info", "aria-hidden": "true" } }),
+            el("span", { text: t("skills.hint") })
           ])
-        ]),
-        tags,
-        el("div", { className: "skill-card__hint" }, [
-          el("i", { attrs: { class: "fas fa-circle-info", "aria-hidden": "true" } }),
-          el("span", { text: t("skills.hint") })
         ])
       ]
     );

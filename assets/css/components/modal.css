@@ -20,9 +20,7 @@
 
 .modal__panel {
   width: min(100%, 460px);
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-strong);
+  border-color: var(--border-strong);
   background: var(--surface);
   box-shadow: var(--shadow-lg);
   transform: translateY(18px) scale(0.98);
@@ -56,23 +54,22 @@
   place-items: center;
   width: 34px;
   height: 34px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   color: var(--text-muted);
   flex-shrink: 0;
-  transition: var(--t-fast);
+  transition: color 0.4s var(--ease-out), border-color var(--t-fast);
 }
 
 .modal__close:hover {
-  color: var(--brand);
-  border-color: var(--brand-line);
+  color: var(--brand-contrast);
+  border-color: var(--brand);
 }
 
 .modal__field {
   width: 100%;
   min-height: 120px;
   padding: 0.9rem 1rem;
-  border-radius: var(--radius-md);
+  border-radius: 6px;
   border: 1px solid var(--border-strong);
   background: var(--surface-2);
   color: var(--text);
@@ -114,7 +111,7 @@
 .lightbox img {
   max-width: min(100%, 1200px);
   max-height: 84vh;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-win);
   box-shadow: var(--shadow-lg);
   object-fit: contain;
 }
@@ -125,14 +122,14 @@
   right: 1.2rem;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-size: 1.1rem;
 }
 
 .lightbox__close:hover {
-  background: var(--brand);
+  border-color: var(--brand);
 }

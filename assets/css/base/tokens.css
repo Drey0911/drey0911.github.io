@@ -12,17 +12,18 @@
   --royal-900: #16225f;
   --royal-950: #0d1440;
 
-  --font-display: "Sora", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Consolas", monospace;
+  /* TIPOGRAFIA CONSOLA */
+  --font-display: "JetBrains Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
+  --font-body: "JetBrains Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
 
-  --step--2: clamp(0.69rem, 0.67rem + 0.1vw, 0.75rem);
-  --step--1: clamp(0.82rem, 0.79rem + 0.15vw, 0.9rem);
-  --step-0: clamp(0.95rem, 0.92rem + 0.18vw, 1.05rem);
+  --step--2: clamp(0.66rem, 0.64rem + 0.1vw, 0.72rem);
+  --step--1: clamp(0.78rem, 0.75rem + 0.15vw, 0.85rem);
+  --step-0: clamp(0.88rem, 0.85rem + 0.18vw, 0.96rem);
   --step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
   --step-2: clamp(1.4rem, 1.28rem + 0.6vw, 1.8rem);
   --step-3: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
-  --step-4: clamp(2.1rem, 1.7rem + 2vw, 3.6rem);
+  --step-4: clamp(2rem, 1.6rem + 2vw, 3.3rem);
 
   --radius-xs: 6px;
   --radius-sm: 10px;
@@ -30,6 +31,13 @@
   --radius-lg: 22px;
   --radius-xl: 30px;
   --radius-pill: 999px;
+  --radius-btn: 3px;
+  --radius-win: 12px;
+
+  /* SEMAFORO VENTANAS */
+  --dot-red: #ff5f57;
+  --dot-yellow: #febc2e;
+  --dot-green: #28c840;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -86,6 +94,13 @@ html[data-theme="dark"] {
   --hero-glow-1: rgba(69, 96, 238, 0.35);
   --hero-glow-2: rgba(27, 43, 133, 0.4);
   --scrim: rgba(4, 8, 20, 0.72);
+
+  /* VENTANAS Y TERMINAL */
+  --chrome: #070c1b;
+  --chrome-2: #111b38;
+  --chrome-field: #0a1125;
+  --term-bar: linear-gradient(180deg, #131e3d 0%, #0d1530 100%);
+  --dot-idle: rgba(139, 160, 224, 0.28);
 }
 
 /* TEMA CLARO */
@@ -121,4 +136,11 @@ html[data-theme="light"] {
   --hero-glow-1: rgba(92, 124, 255, 0.22);
   --hero-glow-2: rgba(160, 185, 255, 0.35);
   --scrim: rgba(10, 20, 50, 0.55);
+
+  /* VENTANAS Y TERMINAL */
+  --chrome: #dde4f6;
+  --chrome-2: #f3f6ff;
+  --chrome-field: #e6ecfa;
+  --term-bar: linear-gradient(180deg, #f3f6ff 0%, #e8eefb 100%);
+  --dot-idle: rgba(20, 44, 120, 0.2);
 }

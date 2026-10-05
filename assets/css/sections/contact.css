@@ -6,12 +6,7 @@
 
 .contact-panel {
   position: relative;
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
   background: var(--surface);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
 }
 
 .contact-panel--accent {
@@ -31,7 +26,7 @@
 }
 
 .contact-panel__title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.4rem;
 }
 
@@ -51,15 +46,35 @@
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 0.75rem 0.9rem;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  transition: var(--t-fast);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: transform var(--t-base), border-color var(--t-base);
 }
 
-.contact-item:hover {
-  background: rgba(255, 255, 255, 0.18);
+.contact-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -2rem;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: skewX(45deg);
+  transition: width 0.6s var(--ease-out);
+}
+
+a.contact-item:hover::before {
+  width: 250%;
+}
+
+a.contact-item:hover {
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateX(4px);
 }
 
@@ -68,7 +83,7 @@
   place-items: center;
   width: 34px;
   height: 34px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-btn);
   background: rgba(255, 255, 255, 0.16);
   font-size: 0.9rem;
   flex-shrink: 0;
@@ -84,7 +99,7 @@
 }
 
 .contact-item__value {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 500;
   word-break: break-word;
 }
@@ -107,21 +122,40 @@
 }
 
 .wa-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 0.9rem;
   width: 100%;
   padding: 0.95rem 1.1rem;
-  border-radius: var(--radius-md);
+  border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--surface-2);
   text-align: left;
-  transition: var(--t-base);
+  transition: border-color var(--t-base), transform var(--t-base);
+}
+
+.wa-btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -2rem;
+  width: 0;
+  height: 100%;
+  background: rgba(37, 211, 102, 0.09);
+  transform: skewX(45deg);
+  transition: width 0.65s var(--ease-out);
+}
+
+.wa-btn:hover::before {
+  width: 250%;
 }
 
 .wa-btn:hover {
   border-color: #25d366;
-  background: rgba(37, 211, 102, 0.08);
   transform: translateY(-2px);
 }
 
@@ -130,7 +164,7 @@
   place-items: center;
   width: 38px;
   height: 38px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-btn);
   background: rgba(37, 211, 102, 0.14);
   color: #25d366;
   font-size: 1.05rem;
@@ -140,14 +174,15 @@
 .wa-btn__title {
   display: block;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.92rem;
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: -0.02em;
 }
 
 .wa-btn__text {
   display: block;
   color: var(--text-muted);
-  font-size: 0.76rem;
+  font-size: 0.7rem;
 }
 
 .wa-btn__arrow {
@@ -165,8 +200,5 @@
 @media (max-width: 900px) {
   .contact__grid {
     grid-template-columns: 1fr;
-  }
-  .contact-panel {
-    padding: var(--space-5);
   }
 }

@@ -2,6 +2,7 @@ import { qs, clear, el, prefersReducedMotion } from "../core/dom.js";
 import { tx, getLang, onLangChange } from "../core/i18n.js";
 import { site } from "../data/site.data.js";
 import { observeReveal } from "../core/reveal.js";
+import { termBar } from "../core/chrome.js";
 
 let typingTimer = null;
 
@@ -104,20 +105,21 @@ const renderQuickAccess = () => {
   clear(grid);
 
   site.quickAccess.forEach((item, index) => {
+    const slug = item.target.replace("#", "");
     const card = el(
       "a",
       {
-        className: "quick-card",
-        attrs: { href: item.target, "data-reveal": "" },
-        dataset: {}
+        className: "quick-card term term--compact",
+        attrs: { href: item.target, "data-reveal": "" }
       },
       [
-        el("span", { className: "quick-card__index", text: item.index }),
+        termBar("~", item.index),
         el("span", { className: "quick-card__title" }, [
           el("i", { attrs: { class: item.icon, "aria-hidden": "true" } }),
           el("span", { text: tx(item.title) })
         ]),
         el("span", { className: "quick-card__text", text: tx(item.text) }),
+        el("span", { className: "term__prompt quick-card__prompt", text: `cd ./${slug}` }),
         el("i", { className: "quick-card__arrow fas fa-arrow-right", attrs: { "aria-hidden": "true" } })
       ]
     );
@@ -138,7 +140,8 @@ const renderStats = () => {
 
   site.stats.forEach((stat) => {
     row.append(
-      el("div", { className: "stat" }, [
+      el("div", { className: "stat term term--compact" }, [
+        termBar(`~/${tx(stat.label).toLowerCase()}`, "", { user: false }),
         el("span", { className: "stat__value", text: stat.value }),
         el("span", { className: "stat__label", text: tx(stat.label) })
       ])

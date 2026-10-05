@@ -51,7 +51,7 @@
   text-transform: uppercase;
   color: var(--brand);
   padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-btn);
   background: var(--brand-soft);
   border: 1px solid var(--brand-line);
 }

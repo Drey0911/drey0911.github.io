@@ -8,18 +8,10 @@
 .skill-card {
   display: flex;
   flex-direction: column;
-  padding: var(--space-5);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-  transition: var(--t-base);
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--brand-line);
-  box-shadow: var(--shadow-md);
+.skill-card__view {
+  padding: var(--space-5);
 }
 
 .skill-card__head {
@@ -41,6 +33,13 @@
   color: var(--brand);
   font-size: 1rem;
   flex-shrink: 0;
+  transition: background-color var(--t-base), color var(--t-base), transform var(--t-base);
+}
+
+.skill-card:hover .skill-card__icon {
+  background: var(--brand);
+  color: var(--brand-contrast);
+  transform: rotate(-6deg);
 }
 
 .skill-card__kicker {
@@ -52,7 +51,7 @@
 }
 
 .skill-card__title {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   margin-top: 0.15rem;
 }
 
@@ -72,18 +71,39 @@
 
 .skill-tag {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.38rem 0.75rem;
-  border-radius: var(--radius-pill);
+  gap: 0.45rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text-soft);
-  font-size: 0.76rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   font-weight: 500;
   cursor: pointer;
-  transition: var(--t-fast);
+  transition: color 0.4s var(--ease-out), border-color var(--t-fast), transform var(--t-fast);
+}
+
+.skill-tag::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -1.5rem;
+  width: 0;
+  height: 100%;
+  background: var(--brand-soft);
+  transform: skewX(45deg);
+  transition: width 0.5s var(--ease-out);
+}
+
+.skill-tag:hover::before,
+.skill-tag.is-active::before {
+  width: 250%;
 }
 
 .skill-tag img {
@@ -96,7 +116,6 @@
 .skill-tag.is-active {
   border-color: var(--brand);
   color: var(--brand);
-  background: var(--brand-soft);
   transform: translateY(-2px);
 }
 
@@ -120,7 +139,7 @@
   z-index: 250;
   max-width: min(320px, calc(100vw - 2rem));
   padding: 0.75rem 0.9rem;
-  border-radius: var(--radius-md);
+  border-radius: 6px;
   border: 1px solid var(--brand-line);
   background: var(--surface-3);
   color: var(--text-soft);
@@ -142,6 +161,6 @@
   display: block;
   color: var(--brand);
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   margin-bottom: 0.2rem;
 }

@@ -51,7 +51,6 @@ export const en = {
     title: "Stack and expertise",
     subtitle:
       "Technologies I work with, grouped by area. Hover or tap each tag to see the details.",
-    hint: "Tap a tag to see the details"
   },
   projects: {
     eyebrow: "Projects",

@@ -52,7 +52,6 @@ export const es = {
     title: "Stack y habilidades",
     subtitle:
       "Tecnologías con las que trabajo, agrupadas por área. Pasa el cursor o toca cada etiqueta para ver el detalle.",
-    hint: "Toca una etiqueta para ver el detalle"
   },
   projects: {
     eyebrow: "Proyectos",

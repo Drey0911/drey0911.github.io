@@ -91,9 +91,7 @@ const projectCard = (project) => {
         alt: tx(project.title),
         loading: "lazy"
       }
-    }),
-    el("span", { className: "project-card__type", text: t(`projects.${project.type}`) }),
-    el("span", { className: "project-card__year", text: project.year })
+    })
   ]);
 
   const body = el("div", { className: "project-card__body" }, [

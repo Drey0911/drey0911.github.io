@@ -107,10 +107,6 @@ const renderGroups = () => {
             ])
           ]),
           tags,
-          el("div", { className: "skill-card__hint" }, [
-            el("i", { attrs: { class: "fas fa-circle-info", "aria-hidden": "true" } }),
-            el("span", { text: t("skills.hint") })
-          ])
         ])
       ]
     );
